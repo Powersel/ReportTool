@@ -5,7 +5,7 @@ typealias ButtonActionCompletionHandler = () -> ()
 
 final public class RokuReportToolViewController: RokuBaseViewController {
     
-    init(value: String) {
+    public init(value: String) {
         super.init(nibName: "RokuReportToolViewController", bundle: .module)
     }
     
