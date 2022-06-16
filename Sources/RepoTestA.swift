@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct RepoTestA {
+public struct RepoTestA {
     
-    func simplePrint() {
+    public func simplePrint() {
         print("Simple AAAA")
     }
     

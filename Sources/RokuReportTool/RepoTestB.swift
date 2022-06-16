@@ -9,9 +9,9 @@ import Foundation
 
 import Foundation
 
-struct RepoTestB {
+public struct RepoTestB {
     
-    func simplePrint() {
+    public func simplePrint() {
         print("Simple BBB")
     }
     

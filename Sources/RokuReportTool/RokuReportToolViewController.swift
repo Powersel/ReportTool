@@ -1,6 +1,6 @@
 
 import UIKit
 
-final class RokuReportToolViewController: UIViewController {
+final public class RokuReportToolViewController: UIViewController {
     
 }
