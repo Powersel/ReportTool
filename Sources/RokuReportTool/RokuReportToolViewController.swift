@@ -5,12 +5,13 @@ typealias ButtonActionCompletionHandler = () -> ()
 
 final public class RokuReportToolViewController: RokuBaseViewController {
     
-    init(with value: String) {
+    init(value: String) {
         super.init(nibName: "RokuReportToolViewController", bundle: .module)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(nibName: "RokuReportToolViewController", bundle: nil)
+//        fatalError("init(coder:) has not been implemented")
     }
     
     public override func viewDidLoad() {
