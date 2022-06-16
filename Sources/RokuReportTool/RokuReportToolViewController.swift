@@ -1,6 +1,15 @@
 
 import UIKit
 
-final public class RokuReportToolViewController: UIViewController {
+typealias ButtonActionCompletionHandler = () -> ()
+
+final public class RokuReportToolViewController: RokuBaseViewController {
+    
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("RokuReportToolViewController is loaded")
+    }
     
 }
