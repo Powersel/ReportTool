@@ -148,6 +148,8 @@ private extension RokuReportToolViewController {
     }
     
     private func configureButtons() {
+        navigationController?.navigationBar.isHidden = false
+        
         sendReportButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         let sendReportTitle = NSLocalizedString("Send report", comment:"Send report button title, in Issue report screen")
         sendReportButton.setTitle(sendReportTitle, for: .normal)
