@@ -43,10 +43,10 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     }
     
     @IBAction func sendReportButtonClicked(_ sender: Any) {
-//        if sendReportButton.isUserInteractionEnabled == true {
-//            sendReportButton.isUserInteractionEnabled = false
-//            viewLogic.sendReport()
-//        }
+        if sendReportButton.isUserInteractionEnabled == true {
+            sendReportButton.isUserInteractionEnabled = false
+            viewLogic.sendReport()
+        }
     }
     
     @objc func handleScreenTap() {
