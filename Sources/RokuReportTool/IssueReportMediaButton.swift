@@ -99,6 +99,8 @@ final class IssueReportMediaButton: UIView {
         mediaIcon.widthAnchor.constraint(equalToConstant: 50).isActive = true
         mediaIcon.contentMode = .scaleAspectFit
         
+        let photoThumbnailImage = Bundle.module.url(forResource: "photoPreviewThumbnail", withExtension: "png")
+        
         let photoThumbnail = UIImage(named: "photoPreviewThumbnail", in: .module, compatibleWith: nil)
         let videoThumbnail = UIImage(named: "videoPreviewThumbnail", in: .module, compatibleWith: nil)
         mediaIcon.image = mediaType == .photo ? photoThumbnail : videoThumbnail
