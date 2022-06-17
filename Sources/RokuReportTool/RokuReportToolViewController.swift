@@ -18,15 +18,15 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     @IBOutlet weak var optionalMediaLabel: UILabel!
     @IBOutlet weak var mediaButtonsStackView: UIStackView!
     
-    private let viewLogic = ReportToolViewLogic()
-    private var spinner: RokuSpinner?
+//    private let viewLogic = ReportToolViewLogic()
+//    private var spinner: RokuSpinner?
     
     public init(value: String) {
         super.init(nibName: "RokuReportToolViewController", bundle: .module)
     }
     
     required init?(coder: NSCoder) {
-        super.init(nibName: "RokuReportToolViewController", bundle: .module)
+        super.init(nibName: "RokuReportToolViewController", bundle: nil)
 //        fatalError("init(coder:) has not been implemented")
     }
     
