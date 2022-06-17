@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,9 +17,9 @@
                 <outlet property="mediaButtonsStackView" destination="mvg-7g-tIg" id="sa6-CZ-uyO"/>
                 <outlet property="optionalMediaLabel" destination="Eir-hD-gcr" id="MiE-bA-rer"/>
                 <outlet property="sendReportButton" destination="lrA-0M-9cv" id="SdA-5Y-MFh"/>
+                <outlet property="summaryContainer" destination="qfg-sE-mD5" id="8JZ-8J-NR8"/>
                 <outlet property="summaryCounterLabel" destination="1kO-uC-FiB" id="cWf-aS-ppV"/>
                 <outlet property="summaryTextView" destination="uvt-Zq-WeM" id="RFe-Rr-dt7"/>
-                <outlet property="summryContainer" destination="qfg-sE-mD5" id="Tqj-Fp-FRf"/>
                 <outlet property="view" destination="Hc1-8y-eAS" id="7cW-lv-ard"/>
             </connections>
         </placeholder>
@@ -48,6 +49,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="YtW-OA-oQz"/>
                             </constraints>
+                            <connections>
+                                <action selector="sendReportButtonClicked:" destination="-1" eventType="touchUpInside" id="trT-8e-0rI"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U78-Pa-ErP" userLabel="infoViewsContainer">
                             <rect key="frame" x="16" y="281.5" width="382" height="120"/>
