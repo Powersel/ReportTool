@@ -52,6 +52,10 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     @objc func handleScreenTap() {
         view.endEditing(true)
     }
+    
+    @objc func goBackTap() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Private
@@ -152,13 +156,12 @@ private extension RokuReportToolViewController {
         sendReportButton.layer.cornerRadius = 4
         
         navigationItem.hidesBackButton = true
-//        let closeImage = UIImage(imageLiteralResourceName: "Close")
-//        let closeButton = UIBarButtonItem(image: closeImage,
-//                                          style: .plain,
-//                                          target: self,
-//                                          action: #selector(animationNavBack))
-//        navigationItem.leftBarButtonItem = closeButton
-//        setLeftNavTools([closeButton])
+        let closeImage = UIImage(named: "Close", in: .module, compatibleWith: nil)
+        let closeButton = UIBarButtonItem(image: closeImage,
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(goBackTap))
+        navigationItem.leftBarButtonItem = closeButton
     }
     
     private func configureThumbnails() {
