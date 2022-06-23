@@ -38,7 +38,10 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewLogic.didAppear()
+//        viewLogic.didAppear()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self?.showSpinnerView()
+        }
     }
     
     @IBAction func sendReportButtonClicked(_ sender: Any) {
