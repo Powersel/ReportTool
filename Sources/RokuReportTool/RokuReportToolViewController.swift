@@ -268,7 +268,7 @@ extension RokuReportToolViewController: RokuReportToolViewLogicProtocol {
             if _self.isSpinnerActive() { return }
             let uploadindTitle = NSLocalizedString("Uploading your data...",
                                                    comment:"Uploading cover screen title, in Issue report screen")
-            _self.showLoadingView(text: uploadindTitle, countdown: 0)
+            _self.showLoadingView(text: uploadindTitle, countdown: 10)
         }
     }
     
