@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "uielements",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Powersel/UIElements.git",
+      "state" : {
+        "revision" : "adbc899cd68e6597e560f4c311d1d5a834efcfb7",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

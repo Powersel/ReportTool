@@ -19,7 +19,6 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     @IBOutlet weak var mediaButtonsStackView: UIStackView!
     
     private let viewLogic = ReportToolViewLogic()
-    private var spinner: RokuSpinner?
     
     public init(value: String) {
         super.init(nibName: "RokuReportToolViewController", bundle: .module)
@@ -148,7 +147,7 @@ private extension RokuReportToolViewController {
     }
     
     private func configureButtons() {
-        navigationController?.navigationBar.isHidden = false
+//        navigationController?.navigationBar.isHidden = false
         
         sendReportButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         let sendReportTitle = NSLocalizedString("Send report", comment:"Send report button title, in Issue report screen")
@@ -157,7 +156,7 @@ private extension RokuReportToolViewController {
         sendReportButton.titleLabel?.textColor = .white
         sendReportButton.layer.cornerRadius = 4
         
-        navigationItem.hidesBackButton = true
+//        navigationItem.hidesBackButton = true
         let closeImage = UIImage(named: "Close", in: .module, compatibleWith: nil)
         let closeButton = UIBarButtonItem(image: closeImage,
                                           style: .plain,
