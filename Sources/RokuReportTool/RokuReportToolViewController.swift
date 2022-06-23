@@ -40,7 +40,7 @@ final public class RokuReportToolViewController: RokuBaseViewController {
         
 //        viewLogic.didAppear()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self?.showSpinnerView()
+            self.showSpinnerView()
         }
     }
     
