@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "RokuReportTool", targets: ["RokuReportTool"]),
     ],
     dependencies: [
-        .package(name: "RokuAutoLayout", url: "https://github.com/Powersel/UIElements.git", from: "0.0.1")
+        .package(name: "RokuAutoLayout", url: "https://github.com/Powersel/UIElements.git", from: "0.0.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
