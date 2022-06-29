@@ -38,10 +38,7 @@ final public class RokuReportToolViewController: RokuBaseViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        viewLogic.didAppear()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self.showSpinnerView()
-        }
+        viewLogic.didAppear()
     }
     
     @IBAction func sendReportButtonClicked(_ sender: Any) {
@@ -69,6 +66,7 @@ private extension RokuReportToolViewController {
         view.addGestureRecognizer(tapGesture)
         view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
+        configureNavigationBar()
         configureLabels()
         configureTextViews()
         configureButtons()
@@ -80,12 +78,11 @@ private extension RokuReportToolViewController {
 //        guard let box = modelData.getSelectedBox() else {
 //            return
 //        }
-//        let displayName = box.location ?? ""
-//        let boxName = "“" + displayName + "”"
-//        let controllerTitle = "Report an issue on " + boxName + " Roku"
-//        let naviTitle = NSLocalizedString(controllerTitle,
-//                                          comment: "Issue report screen title")
-        navigationController?.title = "Issue report tool"
+
+        let controllerTitle = "Issue report tool"
+        let naviTitle = NSLocalizedString(controllerTitle,
+                                          comment: "Issue report screen title")
+        navigationController?.title = naviTitle
         
         issueIDLabel.textAlignment = .left
         issueIDLabel.textColor = .white
@@ -149,23 +146,24 @@ private extension RokuReportToolViewController {
         issueIDLabel.attributedText = titleAttrText
     }
     
-    private func configureButtons() {
-//        navigationController?.navigationBar.isHidden = false
-        
-        sendReportButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-        let sendReportTitle = NSLocalizedString("Send report", comment:"Send report button title, in Issue report screen")
-        sendReportButton.setTitle(sendReportTitle, for: .normal)
-        sendReportButton.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
-        sendReportButton.titleLabel?.textColor = .white
-        sendReportButton.layer.cornerRadius = 4
-        
-//        navigationItem.hidesBackButton = true
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.hidesBackButton = false
         let closeImage = UIImage(named: "Close", in: .module, compatibleWith: nil)
         let closeButton = UIBarButtonItem(image: closeImage,
                                           style: .plain,
                                           target: self,
                                           action: #selector(goBackTap))
         navigationItem.leftBarButtonItem = closeButton
+    }
+    
+    private func configureButtons() {
+        sendReportButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
+        let sendReportTitle = NSLocalizedString("Send report", comment:"Send report button title, in Issue report screen")
+        sendReportButton.setTitle(sendReportTitle, for: .normal)
+        sendReportButton.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
+        sendReportButton.titleLabel?.textColor = .white
+        sendReportButton.layer.cornerRadius = 4
     }
     
     private func configureThumbnails() {
